@@ -1,3 +1,5 @@
+//akhane 10 no palindrome number holo 11
+
 void main() {
   int n = 10; // আপনি চাইলে n এর মান পরিবর্তন করতে পারেন
   int nthPalindrome = findNthPalindrome(n); // n-th প্যালিনড্রোম নাম্বার খুঁজে বের করা
