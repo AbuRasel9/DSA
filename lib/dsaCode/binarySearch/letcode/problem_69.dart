@@ -11,9 +11,9 @@ O(log n) time complexity.
 import 'dart:math';
 
 void main(){
-  print("36 number squre root ${sqrt(36)}");
-  print("25 number squre root ${sqrt(25)}");
-  print("16 number squre root ${sqrt(16)}");
+  print("36 number squre root ${mysqrt(5)}");
+  print("25 number squre root ${mysqrt(25)}");
+  print("16 number squre root ${mysqrt(16)}");
 }
 int mysqrt(int x){
   int left=1;
@@ -23,14 +23,18 @@ int mysqrt(int x){
     return x;
 
   }else{
-    int mid=left+(right-left)~/2;
-    if(mid<=x~/mid){
-      result=mid;
-      left=mid+1;
-    }else{
-      right=mid-1;
-    }
+    while(left<=right){
 
+      int mid=left+(right-left)~/2;
+      if(mid<=x~/mid){
+        result=mid;
+        left=mid+1;
+      }else{
+        right=mid-1;
+      }
+
+
+    }
   }
   return result;
 }
